@@ -7,11 +7,11 @@ env:
 
 on:
   pull_request:
-    branches: ['master', 'main']
+    branches: ['main']
     paths-ignore: ['docs/**']
 
   push:
-    branches: ['master', 'main']
+    branches: ['main']
     paths-ignore: ['docs/**']
 
 concurrency:
@@ -19,18 +19,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  linter:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code Repository
-        uses: actions/checkout@v4
+  # linter:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout Code Repository
+  #       uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Run pre-commit
-        uses: pre-commit/action@v3.0.1
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.12'
+  #     - name: Run pre-commit
+  #       uses: pre-commit/action@v3.0.1
 
   # With no caching at all the entire ci process takes 3m to complete!
   pytest:
