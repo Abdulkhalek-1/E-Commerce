@@ -21,3 +21,18 @@ class ProductImage(models.Model):
 
     def __str__(self) -> str:
         return f"{super().__str__()}-img-{self.pk}"
+
+
+class ProductVariation(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    variation_name = models.CharField(max_length=255)
+    variation_value = models.CharField(max_length=255)
+
+    def __str__(self) -> str:
+        return f"{super().__str__()}-{self.variation_name}"
+
+    def save(self, *args, **kwargs):
+        if self.price is None:
+            self.price = self.product.price
+        super().save(*args, **kwargs)
