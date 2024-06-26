@@ -5,6 +5,7 @@ volumes:
 
 services:
   django: &django
+    restart: always
     build:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
@@ -37,13 +38,14 @@ services:
   redis:
     image: docker.io/redis:6
     container_name: project_local_redis
-    
+
     volumes:
       - project_local_redis_data:/data
-    
+      
 
   celeryworker:
     <<: *django
+    restart: always
     image: project_local_celeryworker
     container_name: project_local_celeryworker
     depends_on:
@@ -54,6 +56,7 @@ services:
 
   celerybeat:
     <<: *django
+    restart: always
     image: project_local_celerybeat
     container_name: project_local_celerybeat
     depends_on:
@@ -64,6 +67,7 @@ services:
 
   flower:
     <<: *django
+    restart: always
     image: project_local_flower
     container_name: project_local_flower
     ports:
