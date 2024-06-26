@@ -50,6 +50,7 @@
                 "mrmlnc.vscode-duplicate",
                 "visualstudioexptteam.vscodeintellicode",
                 "visualstudioexptteam.intellicode-api-usage-examples",
+                "Gruntfuggly.todo-tree",
                 // python
                 "ms-python.python",
                 "ms-python.vscode-pylance",
