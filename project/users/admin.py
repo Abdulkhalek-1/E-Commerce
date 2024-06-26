@@ -6,6 +6,7 @@ from django.utils.translation import gettext_lazy as _
 
 from .forms import UserAdminChangeForm
 from .forms import UserAdminCreationForm
+from .models import Profile
 from .models import Seller
 from .models import User
 
@@ -97,3 +98,9 @@ class SellerAdmin(auth_admin.UserAdmin):
     list_display = ("email", "name", "business_address", "tax_id", "is_staff")
     search_fields = ("email", "name", "business_address", "tax_id")
     ordering = ["email"]
+
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ("user", "bio")
+    search_fields = ("user__email", "user__name", "bio")
