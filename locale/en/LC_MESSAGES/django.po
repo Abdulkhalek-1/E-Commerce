@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-26 14:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: config/settings/base.py:33
+msgid "English"
+msgstr ""
+
+#: config/settings/base.py:34
+msgid "Arabic"
+msgstr ""
+
+#: project/templates/allauth/layouts/entrance.html:8
+#: project/templates/base.html:72
+msgid "Sign In"
+msgstr ""
+
+#: project/templates/base.html:57
+msgid "My Profile"
+msgstr ""
+
+#: project/templates/base.html:61
+msgid "Sign Out"
+msgstr ""
+
+#: project/templates/base.html:67
+msgid "Sign Up"
+msgstr ""
+
+#: project/users/admin.py:26 project/users/admin.py:60
+msgid "Personal info"
+msgstr ""
+
+#: project/users/admin.py:28 project/users/admin.py:70
+msgid "Permissions"
+msgstr ""
+
+#: project/users/admin.py:39 project/users/admin.py:81
+msgid "Important dates"
+msgstr ""
+
+#: project/users/apps.py:9
+msgid "Users"
+msgstr ""
+
+#: project/users/forms.py:27 project/users/tests/test_forms.py:35
+msgid "This email has already been taken."
+msgstr ""
+
+#: project/users/models.py:19
+msgid "Name of User"
+msgstr ""
+
+#: project/users/models.py:22
+msgid "email address"
+msgstr ""
+
+#: project/users/tests/test_views.py:72 project/users/views.py:24
+msgid "Information successfully updated"
+msgstr ""
