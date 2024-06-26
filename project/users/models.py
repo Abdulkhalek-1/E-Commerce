@@ -43,3 +43,16 @@ class Seller(User):
 
     class Meta:
         verbose_name_plural = "Sellers"
+
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
+    profile_picture = models.ImageField(
+        upload_to="profile_pictures/",
+        blank=True,
+        null=True,
+    )
+    bio = models.TextField(blank=True, default="")
+
+    def __str__(self):
+        return self.user.name
